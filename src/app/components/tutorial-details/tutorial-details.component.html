@@ -1,0 +1,117 @@
+<div>
+  <div *ngIf="currentEmployee.id" class="edit-form">
+    <h4>Employee</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentEmployee.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="salary">salary</label>
+        <input
+          type="text"
+          class="form-control"
+          id="salary"
+          [(ngModel)]="currentEmployee.salary"
+          name="salary"
+        />
+      </div>
+      <div class="form-group">
+        <label for="role">role</label>
+        <input
+          type="text"
+          class="form-control"
+          id="role"
+          [(ngModel)]="currentEmployee.role"
+          name="role"
+        />
+      </div>
+      <div class="form-group">
+        <label for="address">address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          [(ngModel)]="currentEmployee.address"
+          name="address"
+        />
+      </div>
+      <div class="form-group">
+        <label for="office">office</label>
+        <input
+          type="text"
+          class="form-control"
+          id="office"
+          [(ngModel)]="currentEmployee.office"
+          name="office"
+        />
+      </div>
+      <div class="form-group">
+        <label for="branch">branch</label>
+        <input
+          type="text"
+          class="form-control"
+          id="branch"
+          [(ngModel)]="currentEmployee.branch"
+          name="branch"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          [(ngModel)]="currentEmployee.email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">phone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          [(ngModel)]="currentEmployee.phone"
+          name="phone"
+        />
+      </div>
+      <div class="form-group">
+        <label for="seniority">Seniority (age)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="seniority"
+          [(ngModel)]="seniority"
+          name="seniority"
+        />
+      </div>
+
+    </form>
+
+
+    <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateTutorial()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentEmployee.id">
+    <br />
+    <p>Cannot access this Employee...</p>
+  </div>
+</div>

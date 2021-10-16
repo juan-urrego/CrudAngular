@@ -1,0 +1,103 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="name">name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="employee.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="salary">salary</label>
+        <input
+          type="text"
+          class="form-control"
+          id="salary"
+          [(ngModel)]="employee.salary"
+          name="salary"
+        />
+      </div>
+      <div class="form-group">
+        <label for="role">role</label>
+        <input
+          type="text"
+          class="form-control"
+          id="role"
+          [(ngModel)]="employee.role"
+          name="role"
+        />
+      </div>
+      <div class="form-group">
+        <label for="address">address</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+          [(ngModel)]="employee.address"
+          name="address"
+        />
+      </div>
+      <div class="form-group">
+        <label for="office">office</label>
+        <input
+          type="text"
+          class="form-control"
+          id="office"
+          [(ngModel)]="employee.office"
+          name="office"
+        />
+      </div>
+      <div class="form-group">
+        <label for="branch">branch</label>
+        <input
+          type="text"
+          class="form-control"
+          id="branch"
+          [(ngModel)]="employee.branch"
+          name="branch"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          [(ngModel)]="employee.email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">phone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          [(ngModel)]="employee.phone"
+          name="phone"
+        />
+      </div>
+      <div class="form-group">
+        <label for="seniority">Seniority (age)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="seniority"
+          [(ngModel)]="seniority"
+          name="seniority"
+        />
+      </div>
+
+      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Employee was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newTutorial()">Add</button>
+    </div>
+  </div>
+</div>
